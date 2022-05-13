@@ -13,7 +13,7 @@ const FuncionarioCreate = () => {
     axios
       .post('http://localhost:3000/funcionarios/create-funcionario', funcionarioObject)
       .then((res) => {
-        if (res.status === 200) alert('Funcionário foi criado com Sucesso!!')
+        if (res.status === 200) alert('Funcionário foi Criado com Sucesso!!')
         else Promise.reject()
       })
       .catch((err) => alert('Algo deu errado...'))
@@ -22,7 +22,7 @@ const FuncionarioCreate = () => {
   // Retorna o form do funcionário
   return (
     <FuncionarioForm initialValues={formValues} onSubmit={onSubmit} enableReinitialize>
-      Create Funcionário
+      Cria Funcionário
     </FuncionarioForm>
   )
 }
