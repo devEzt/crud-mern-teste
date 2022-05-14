@@ -17,23 +17,28 @@ const FuncionarioForm = (props) => {
     <div className="form-wrapper">
       <Formik {...props} validationSchema={validationSchema}>
         <Form>
+          <h3>Nome</h3>
           <FormGroup>
-            <Field name="name" type="text" className="form-control" />
+            <Field name="name" label={'nome'} type="text" className="form-control" placeholder="lastName" />
             <ErrorMessage name="name" className="d-block invalid-feedback" component="span" />
           </FormGroup>
 
           <FormGroup>
-            <Field name="surname" type="text" className="form-control" />
+            <h3>Sobrenome</h3>
+            <Field name="surname" type="text" maxlength="30" minlength="2" className="form-control" />
             <ErrorMessage name="surname" className="d-block invalid-feedback" component="span" />
           </FormGroup>
 
           <FormGroup>
+            <h3>Email</h3>
+
             <Field name="email" type="text" className="form-control" />
             <ErrorMessage name="email" className="d-block invalid-feedback" component="span" />
           </FormGroup>
 
           <FormGroup>
-            <Field name="nis" type="number" className="form-control" />
+            <h3>NIS</h3>
+            <Field name="nis" min={1} max={31} type="number" className="form-control" />
             <ErrorMessage name="nis" className="d-block invalid-feedback" component="span" />
           </FormGroup>
 
